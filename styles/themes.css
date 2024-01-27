@@ -4,3 +4,47 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+html.theme-light {
+  --font-weight_card-title: 700;
+  --font-weight_card-main: 400;
+  --background-color: #fff;
+  --accent-color: #000;
+  --gradient-color-net: #d3d3d3;
+  --gradient-color-vertical-top: #e7e7e7;
+  --gradient-color-vertical-bottom: #1a1a1a;
+  --watermark-stroke-color: #fff;
+  --watermark-color: #000;
+  --button-color: #fff;
+  --heart-contour: #000;
+}
+
+html.theme-dark {
+  --font-weight_card-title: 785;
+  --font-weight_card-main: 465;
+  --background-color: #000;
+  --accent-color: #00CC14;
+  --gradient-color-net: #000;
+  --gradient-color-vertical-top: #007f0c;
+  --gradient-color-vertical-bottom: #004306;
+  --watermark-stroke-color: #000;
+  --watermark-color: #00CC14;
+  --button-color: #00CC14;
+  --heart-contour: #00CC14;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --font-weight_card-title: 785;
+  --font-weight_card-main: 465;
+  --background-color: #000;
+  --accent-color: #00CC14;
+  --gradient-color-net: #000;
+  --gradient-color-vertical-top: #007f0c;
+  --gradient-color-vertical-bottom: #004306;
+  --watermark-stroke-color: #000;
+  --watermark-color: #00CC14;
+  --button-color: #00CC14;
+  --heart-contour: #00CC14;
+  }
+}
