@@ -407,6 +407,10 @@ dialog::backdrop {
     display: flex;
     flex-direction: column;
   }
+
+  .watermark {
+    right: 11px;
+  }
 }
 
 @supports((text-stroke: 1px var(--watermark-stroke-color)) or (-webkit-text-stroke: 1px var(--watermark-stroke-color))) {
