@@ -43,7 +43,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  block-size: clamp(327px, 17.1372rem + 6.8535vw, 369px);
+  min-block-size: clamp(327px, 17.1372rem + 6.8535vw, 369px);
   margin-block: 100px;
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
@@ -67,7 +67,7 @@
 }
 
 .theme-menu {
-  font-family: var(--font-accent);
+  font-family: var(--font-accent), 'Arial', sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -82,7 +82,6 @@
 .theme-menu__item {
   position: relative;
   display: block;
-  ;
 }
 
 .theme-menu__button {
@@ -94,12 +93,12 @@
   border: none;
   font-size: 14px;
   font-style: normal;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
   cursor: pointer;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
@@ -136,6 +135,7 @@
   content: "▶";
   position: absolute;
   left: -20px;
+  top: 4px;
   animation: arrow 0.5s ease-in-out infinite alternate;
   opacity: 0.6;
   pointer-events: none;
@@ -224,9 +224,11 @@
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
   border: 2px solid transparent;
   height: 38px;
-  padding: 0 0 1px;
+  padding: 0px;
   background: transparent;
   cursor: pointer;
   appearance: none;
@@ -278,7 +280,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
-  transition: box-shadow 0.3s ease;
 }
 
 .button-save {
@@ -323,7 +324,7 @@
   padding-inline: 40px;
   padding-block: 30px;
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--font-accent), Arial, Helvetica, sans-serif;
+  font-family: var(--font-accent), 'Arial', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   color: var(--accent-color, #000);
